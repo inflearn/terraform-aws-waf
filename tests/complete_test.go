@@ -8,7 +8,7 @@ import (
 func TestWaf(t *testing.T) {
 	t.Parallel()
 
-	wafTfDir := "../examples/whitelist"
+	wafTfDir := "../examples/complete"
 
 	defer test_structure.RunTestStage(t, "teardown", func() { teardown(t, wafTfDir) })
 	test_structure.RunTestStage(t, "deploy", func() { deploy(t, wafTfDir, map[string]interface{}{}) })
